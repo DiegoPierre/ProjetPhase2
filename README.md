@@ -163,3 +163,27 @@ plt.show()
     <p style="font-style: italic; color: #7f8c8d;">
     </p>
 </div>
+
+## Distribution des notes arrondies (PMF)
+
+- La colonne `averagerating` est arrondie à l'entier le plus proche (`rounded_rating`).  
+- La fonction de masse de probabilité (PMF) est calculée en comptant la fréquence relative de chaque note arrondie.  
+- Le graphique en barres représente la probabilité d'obtenir chaque note entière.  
+
+Cette visualisation permet d’analyser la répartition des notes de manière discrète, facilitant la compréhension des tendances de notation.
+---
+```python
+filtered_movies['rounded_rating'] = filtered_movies['averagerating'].round()
+pmf = filtered_movies['rounded_rating'].value_counts(normalize=True).sort_index()
+pmf.plot(kind='bar', color='skyblue')
+plt.title("PMF - Répartition des notes")
+plt.xlabel("Note arrondie")
+plt.ylabel("Probabilité")
+plt.show()
+
+```
+ <div style="text-align: center;">
+    <img src="Images/Screenshot 2025-07-19 104048.png" width="800">
+    <p style="font-style: italic; color: #7f8c8d;">
+    </p>
+</div>
