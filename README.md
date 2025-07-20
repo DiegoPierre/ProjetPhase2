@@ -274,3 +274,68 @@ plt.show()
     <p style="font-style: italic; color: #7f8c8d;">
     </p>
 </div>
+
+## Régression Linéaire : Durée des films vs Note moyenne
+
+Un modèle de **régression linéaire** est construit pour analyser la relation entre :
+
+- **Variable indépendante (X)** : `runtime_minutes` (durée du film en minutes)  
+- **Variable dépendante (y)** : `averagerating` (note moyenne IMDb)
+
+### Étapes :
+
+1. Suppression des films dont la durée est manquante avec `dropna`.  
+2. Ajout d’une constante (intercept) avec `sm.add_constant(X)` pour modéliser l’ordonnée à l’origine.  
+3. Ajustement d’un modèle de régression linéaire avec `statsmodels.OLS`.  
+4. Affichage des résultats avec `model.summary()`.
+
+### Résultats principaux :
+
+- **Coef. (runtime_minutes)** : indique l’effet d’une minute supplémentaire sur la note moyenne (positif, négatif ou nul).  
+- **P-value** : permet de tester si cet effet est statistiquement significatif.  
+- **R-squared** : mesure la proportion de la variance expliquée par le modèle (plus il est proche de 1, mieux c’est).
+
+### Interprétation :
+
+- Si la pente est significative et non nulle, la durée du film influence les notes moyennes.  
+- Si la p-value est > 0.05, la relation n’est **pas significative** statistiquement.
+
+
+# Conclusion et Prochaines Étapes
+
+## Synthèse des Résultats Clés
+
+- Certains **genres** se distinguent par leur combinaison de **popularité** (nombre de votes, box-office) et de **qualité perçue** (note moyenne).
+- Une **durée optimale** de film autour de **90 à 120 minutes** semble associée à de meilleures performances critiques et commerciales.
+- Les **acteurs et réalisateurs récurrents** dans les films à succès peuvent être identifiés pour orienter les castings futurs.
+- La corrélation entre durée, note et popularité reste modérée mais significative pour certains segments.
+
+## Limites de l’Analyse
+
+- Les données IMDB et box-office utilisées couvrent principalement des films passés :  
+  **les tendances récentes ou émergentes peuvent ne pas être capturées**.
+- Certains films ont des **données manquantes** (durée, genres, recettes brutes), ce qui peut biaiser les résultats.
+- L’analyse ne tient pas compte de facteurs qualitatifs importants : **scénario, innovation, contexte de sortie, plateformes de streaming, etc.**
+
+## Pistes pour des Analyses Futures
+
+1. **Utiliser l'API TMDB ou OMDB**  
+   - Pour récupérer des données plus récentes ou plus détaillées (budget, casting complet, synopsis, etc.).
+
+2. **Inclure des données financières externes**  
+   - Budget de production  
+   - ROI (retour sur investissement)  
+   - Données par région ou par plateforme de diffusion (Netflix, Prime, etc.)
+
+3. **Analyser les tendances récentes du marché**  
+   - Évolution des genres populaires après 2023  
+   - Impact des plateformes de streaming sur la durée optimale ou les formats préférés (séries vs films courts)
+
+4. **Étendre l’analyse à l’international**  
+   - Comparer les préférences entre les marchés (Amérique, Europe, Asie, etc.)
+
+## Prochaine Étape
+
+- Intégrer ces analyses dans un tableau de bord interactif (ex : **Streamlit, Dash**)  
+- Automatiser la collecte de données pour suivre l’évolution des tendances en temps réel  
+- Affiner les recommandations commerciales avec des données complémentaires
