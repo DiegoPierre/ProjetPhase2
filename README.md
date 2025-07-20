@@ -29,7 +29,7 @@ Les résultats aideront le studio à :
 - Réduire les risques grâce aux données
 
   <div style="text-align: center;">
-    <img src="Images/IMDB_ERD.jpeg" width="400">
+    <img src="Images/IMDB_ERD.jpeg" width="800">
     <p style="font-style: italic; color: #7f8c8d;">
     </p>
 </div>
@@ -108,4 +108,53 @@ Ensuite, nous configurons l'apparence des graphiques avec `seaborn` et `matplotl
 sns.set(style="whitegrid")  # Style avec fond blanc et grille discrète
 plt.rcParams["figure.figsize"] = (10, 6)  # Taille standard des graphiques
 
+## 4. Analysis et Recommendations
 
+###  Visualisations
+
+- **Histogramme des notes**  
+  Pour visualiser la distribution des notes moyennes des films.
+
+- **Barplot des genres les mieux notés**  
+  Permet d'identifier quels genres obtiennent les meilleures critiques du public.
+
+- **Scatterplots** :
+  - **Durée vs Note moyenne** : Analyse de la relation entre la longueur d’un film et sa popularité.
+  - **Popularité vs Revenus** : Si les données du box-office sont disponibles, cette visualisation explore si les films populaires rapportent plus.
+
+
+
+###  Analyses statistiques
+
+- **Corrélations** :
+  - **Durée vs Note moyenne** : Test de corrélation pour voir s’il existe un lien entre la longueur d’un film et son score IMDb.
+  - **Popularité (nombre de votes) vs Note moyenne** : Vérification d’un éventuel biais de popularité.
+
+- **Régression linéaire** :
+  - **Durée => Note moyenne** : Modèle pour prédire la note moyenne en fonction de la durée d’un film.
+
+- **ANOVA** :
+  - Test d’analyse de variance pour voir si les différences de notes moyennes entre genres sont statistiquement significatives.
+
+
+## Visualisation de la distribution des durées des films
+
+Ce graphique représente un histogramme de la durée des films (`runtime_minutes`) avec une estimation de la densité (courbe KDE) superposée.  
+
+- L’histogramme montre la répartition du nombre de films par intervalles de durée.  
+- La courbe KDE permet d’avoir une estimation lisse de la densité des durées, mettant en évidence les tendances et les pics.
+
+Cette visualisation aide à comprendre la distribution des durées et à détecter d’éventuelles valeurs atypiques ou modes dans les données.
+
+plt.figure(figsize=(8,5))
+sns.histplot(filtered_movies['runtime_minutes'], bins=30, kde=True)
+plt.title("Distribution de la durée des films")
+plt.xlabel("Durée (minutes)")
+plt.ylabel("Nombre de films")
+plt.show()
+
+ <div style="text-align: center;">
+    <img src="Images/Screenshot 2025-07-19 104151.png" width="800">
+    <p style="font-style: italic; color: #7f8c8d;">
+    </p>
+</div>
