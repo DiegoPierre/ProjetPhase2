@@ -342,4 +342,5 @@ Un modèle de **régression linéaire** est construit pour analyser la relation 
 - Affiner les recommandations commerciales avec des données complémentaires
 
   Lien Linkedlin www.linkedin.com/in/septama-louison-03335a31a
+  
   email :septamalouison634@gmail.com
