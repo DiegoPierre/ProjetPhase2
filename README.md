@@ -212,3 +212,38 @@ plt.show()
     <p style="font-style: italic; color: #7f8c8d;">
     </p>
 </div>
+
+## Simulation du Théorème Central Limite (TCL)
+
+Cette expérience illustre le **Théorème Central Limite (TCL)** à partir des notes moyennes des films.
+
+### Étapes de la simulation :
+
+- 1000 échantillons de taille 30 sont prélevés aléatoirement avec remise depuis la colonne `averagerating`.  
+- Pour chaque échantillon, la moyenne est calculée et ajoutée à une liste.  
+- Un histogramme des 1000 moyennes obtenues est ensuite tracé.
+
+### Interprétation :
+
+Même si la distribution initiale des notes (`averagerating`) n’est pas parfaitement normale,  
+la distribution des **moyennes d’échantillons** tend à suivre une distribution normale.
+
+Cela confirme empiriquement le **Théorème Central Limite**, qui garantit la normalité des moyennes d’échantillons pour des tailles d’échantillons suffisamment grandes (ici, n=30).
+
+```python
+means = []
+for i in range(1000):
+    sample = filtered_movies['averagerating'].sample(30, replace=True)
+    means.append(sample.mean())
+
+plt.hist(means, bins=30, color='green', alpha=0.7)
+plt.title("Théorème Central Limite - Moyennes d'échantillons")
+plt.xlabel("Moyenne des notes")
+plt.ylabel("Fréquence")
+plt.show()
+```
+<div style="text-align: center;">
+    <img src="Images/Screenshot 2025-07-19 104251.png" width="800">
+    <p style="font-style: italic; color: #7f8c8d;">
+    </p>
+</div>
