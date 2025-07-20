@@ -104,10 +104,10 @@ Je commence par importer les principales librairies nécessaires à l'analyse :
 
 Ensuite, nous configurons l'apparence des graphiques avec `seaborn` et `matplotlib` pour garantir des visualisations claires et cohérentes :
 
-
+```python
 sns.set(style="whitegrid")  # Style avec fond blanc et grille discrète
 plt.rcParams["figure.figsize"] = (10, 6)  # Taille standard des graphiques
-
+```
 ## 4. Analysis et Recommendations
 
 ###  Visualisations
