@@ -145,16 +145,16 @@ Ce graphique représente un histogramme de la durée des films (`runtime_minutes
 - La courbe KDE permet d’avoir une estimation lisse de la densité des durées, mettant en évidence les tendances et les pics.
 
 Cette visualisation aide à comprendre la distribution des durées et à détecter d’éventuelles valeurs atypiques ou modes dans les données.
+-----
 
-
-
+```python
 plt.figure(figsize=(8,5))
 sns.histplot(filtered_movies['runtime_minutes'], bins=30, kde=True)
 plt.title("Distribution de la durée des films")
 plt.xlabel("Durée (minutes)")
 plt.ylabel("Nombre de films")
 plt.show()
-
+```
 
  <div style="text-align: center;">
     <img src="Images/Screenshot 2025-07-19 104151.png" width="800">
