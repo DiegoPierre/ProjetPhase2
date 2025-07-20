@@ -340,3 +340,6 @@ Un modèle de **régression linéaire** est construit pour analyser la relation 
 - Intégrer ces analyses dans un tableau de bord interactif (ex : **Streamlit, Dash**)  
 - Automatiser la collecte de données pour suivre l’évolution des tendances en temps réel  
 - Affiner les recommandations commerciales avec des données complémentaires
+
+  Lien Linkedlin www.linkedin.com/in/septama-louison-03335a31a
+  email :septamalouison634@gmail.com
