@@ -171,7 +171,8 @@ plt.show()
 - Le graphique en barres représente la probabilité d'obtenir chaque note entière.  
 
 Cette visualisation permet d’analyser la répartition des notes de manière discrète, facilitant la compréhension des tendances de notation.
----
+
+
 ```python
 filtered_movies['rounded_rating'] = filtered_movies['averagerating'].round()
 pmf = filtered_movies['rounded_rating'].value_counts(normalize=True).sort_index()
@@ -184,6 +185,30 @@ plt.show()
 ```
  <div style="text-align: center;">
     <img src="Images/Screenshot 2025-07-19 104048.png" width="800">
+    <p style="font-style: italic; color: #7f8c8d;">
+    </p>
+</div>
+
+## Distribution des notes moyennes (IMDb)
+
+Ce graphique utilise un **KDE plot** (Kernel Density Estimation) pour visualiser la distribution continue des notes moyennes (`averagerating`) des films.
+
+- La courbe lisse montre comment les notes sont réparties dans l’ensemble des films filtrés.  
+- L’aire sous la courbe est remplie pour faciliter la lecture visuelle de la densité.  
+- Cette représentation est utile pour identifier les concentrations de films autour de certaines notes, ainsi que pour détecter des asymétries ou anomalies.
+
+Cela donne une vue plus fine et continue de la répartition des notes qu’un simple histogramme.
+
+```python
+plt.figure(figsize=(8,5))
+sns.kdeplot(filtered_movies['averagerating'], fill=True, color='purple')
+plt.title("Distribution des notes moyennes (IMDb)")
+plt.xlabel("Note moyenne")
+plt.ylabel("Densité")
+plt.show()
+```
+ <div style="text-align: center;">
+    <img src="Images/Screenshot 2025-07-19 104222.png" width="800">
     <p style="font-style: italic; color: #7f8c8d;">
     </p>
 </div>
