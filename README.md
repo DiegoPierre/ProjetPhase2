@@ -247,3 +247,30 @@ plt.show()
     <p style="font-style: italic; color: #7f8c8d;">
     </p>
 </div>
+## Matrice de corrélation entre les variables principales
+
+Cette visualisation montre la corrélation entre trois variables clés du dataset :
+
+- `averagerating` : note moyenne des films  
+- `runtime_minutes` : durée des films en minutes  
+- `numvotes` : nombre total de votes  
+
+### Interprétation :
+
+- La matrice de corrélation est affichée sous forme de **heatmap** avec des annotations des coefficients de corrélation.  
+- Les valeurs varient entre **-1** (corrélation négative parfaite) et **+1** (corrélation positive parfaite).  
+- Une valeur proche de **0** indique l’absence de corrélation linéaire.
+
+Cette analyse permet d’identifier les relations linéaires éventuelles entre les variables, ce qui peut guider les choix d’analyses statistiques ou de modélisation.
+
+```python
+corr = movies[['averagerating', 'runtime_minutes', 'numvotes']].corr()
+sns.heatmap(corr, annot=True, cmap="Blues")
+plt.title("Corrélation entre les variables principales")
+plt.show()
+```
+<div style="text-align: center;">
+    <img src="Images/Screenshot 2025-07-19 104324.png" width="800">
+    <p style="font-style: italic; color: #7f8c8d;">
+    </p>
+</div>
