@@ -27,7 +27,8 @@ Les résultats aideront le studio à :
 - Choisir des genres et formats adaptés
 - Optimiser les budgets et les durées
 - Réduire les risques grâce aux données
-
+  
+Schéma des tables de la base de données im.db
   <div style="text-align: center;">
     <img src="Images/IMDB_ERD.jpeg" width="800">
     <p style="font-style: italic; color: #7f8c8d;">
