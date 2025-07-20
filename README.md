@@ -39,7 +39,7 @@ Schéma des tables de la base de données im.db
 
 Certaines données ne sont pas incluses dans le dépôt GitHub car elles dépassent la limite de taille de GitHub.
 
-Vous pouvez les télécharger ici Puis Deziper le fichier copier la base de donnees im.db dans Notebooks :
+Vous pouvez les télécharger ,Deziper le fichier Data, Puis copier la base de donnees im.db  et deposer dans  fichier Notebooks :
 
 👉 [Télécharger les données sur Google Drive Cliquer Sur Data](https://drive.google.com/drive/folders/1b0ARNFQVrvjQDW_qD9HMm8M_nbPl6Vxl?usp=drive_link)
 
