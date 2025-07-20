@@ -104,7 +104,7 @@ Je commence par importer les principales librairies nécessaires à l'analyse :
 
 Ensuite, nous configurons l'apparence des graphiques avec `seaborn` et `matplotlib` pour garantir des visualisations claires et cohérentes :
 
-```python
+
 sns.set(style="whitegrid")  # Style avec fond blanc et grille discrète
 plt.rcParams["figure.figsize"] = (10, 6)  # Taille standard des graphiques
 
@@ -152,6 +152,7 @@ plt.title("Distribution de la durée des films")
 plt.xlabel("Durée (minutes)")
 plt.ylabel("Nombre de films")
 plt.show()
+
 
  <div style="text-align: center;">
     <img src="Images/Screenshot 2025-07-19 104151.png" width="800">
