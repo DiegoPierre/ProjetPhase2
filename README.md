@@ -33,3 +33,11 @@ Les résultats aideront le studio à :
     <p style="font-style: italic; color: #7f8c8d;">
     </p>
 </div>
+## Données volumineuses
+
+Certaines données ne sont pas incluses dans le dépôt GitHub car elles dépassent la limite de taille de GitHub.
+
+Vous pouvez les télécharger ici :
+
+👉 [Télécharger les données sur Google Drive](https://drive.google.com/drive/folders/1b0ARNFQVrvjQDW_qD9HMm8M_nbPl6Vxl?usp=drive_link)
+
