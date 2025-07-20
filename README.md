@@ -146,6 +146,8 @@ Ce graphique représente un histogramme de la durée des films (`runtime_minutes
 
 Cette visualisation aide à comprendre la distribution des durées et à détecter d’éventuelles valeurs atypiques ou modes dans les données.
 
+
+
 plt.figure(figsize=(8,5))
 sns.histplot(filtered_movies['runtime_minutes'], bins=30, kde=True)
 plt.title("Distribution de la durée des films")
