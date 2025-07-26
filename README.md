@@ -41,8 +41,8 @@ Certaines données ne sont pas incluses dans le dépôt GitHub car elles dépass
 
 Vous pouvez les télécharger ,Deziper le fichier Data, Puis copier la base de donnees im.db  et deposer dans  fichier Notebooks :
 
-👉 [Télécharger les données sur Google Drive Cliquer Sur Data](https://drive.google.com/drive/folders/1b0ARNFQVrvjQDW_qD9HMm8M_nbPl6Vxl?usp=drive_link)
-
+👉 [Télécharger les données sur Google Drive Cliquer Sur Data][(https://drive.google.com/drive/folders/1b0ARNFQVrvjQDW_qD9HMm8M_nbPl6Vxl?usp=drive_link)
+](https://drive.google.com/file/d/18l_G01a7wujxFHpOH-xQE1hjTPda7x6X/view?usp=sharing)
 ## 2. Compréhension des données
 
 Dans cette section, j'analyse la structure de la base de données **`im.db`** afin d’identifier les tables disponibles et déterminer lesquelles seront utiles pour répondre à nos **questions commerciales**.
